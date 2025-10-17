@@ -76,3 +76,25 @@ Tests the application to identify bugs and issues before deployment. Ensures the
 - A **Booking** is linked to one **Payment** (one-to-one relationship)
 - A **Property** can have multiple **Reviews** (one-to-many relationship)
 - A **User** can write multiple **Reviews** (one-to-many relationship)
+## Feature Breakdown
+
+### User Management
+Allows users to create accounts, log in, and manage their profiles. Users can update their personal information, profile pictures, and preferences. This feature ensures secure authentication and provides a personalized experience for each user.
+
+### Property Management
+Enables property owners to list, edit, and manage their properties on the platform. Owners can upload photos, set pricing, add descriptions, and manage availability. This feature is essential for attracting guests and maintaining an up-to-date property catalog.
+
+### Booking System
+Allows guests to search for properties, view availability, and book accommodations for specific dates. This feature handles the core functionality of the platform by connecting guests with available properties. The booking system calculates prices, manages reservations, and tracks booking status.
+
+### Reviews and Ratings
+Enables guests to leave reviews and ratings for properties and hosts after their stay. This feature builds trust within the community by providing authentic feedback and helping future guests make informed decisions. Reviews also help property owners improve their services.
+
+### Payment Processing
+Handles secure payment transactions between guests and hosts for bookings. This feature integrates with payment gateways to process credit card payments, transfers, and refunds. It ensures financial security and transparency for both parties.
+
+### Search and Filtering
+Allows guests to search for properties based on location, price range, amenities, and other criteria. This feature improves user experience by helping guests quickly find properties that match their needs. Advanced filtering options make the platform more user-friendly and efficient.
+
+### Notifications and Messaging
+Enables communication between guests and hosts through notifications and messaging. This feature allows hosts to respond to inquiries, confirm bookings, and communicate with guests. Clear communication helps prevent misunderstandings and improves overall user satisfaction.
