@@ -123,3 +123,27 @@ CORS policies will be configured to control which external websites can access o
 
 ### API Logging and Monitoring
 All API requests and responses will be logged and monitored for suspicious activity. We will track authentication attempts, failed requests, and unusual patterns. This helps detect security breaches early and provides an audit trail for compliance and troubleshooting.
+## CI/CD Pipeline
+
+### What is CI/CD?
+CI/CD stands for Continuous Integration and Continuous Deployment. Continuous Integration (CI) involves automatically testing and integrating code changes from multiple developers into a shared repository. Continuous Deployment (CD) automates the process of deploying tested code to production environments. Together, CI/CD pipelines streamline the development workflow and ensure code quality.
+
+### Why CI/CD is Important for This Project
+CI/CD pipelines are crucial for the AirBnB Clone project for several reasons. They automatically run tests on every code change, catching bugs early before they reach production. This reduces the time between development and deployment, allowing the team to release features faster. CI/CD also ensures consistency across deployments and reduces the risk of human error. For a project handling user data and payments, automated testing and deployment provide confidence in code quality and security.
+
+### CI/CD Tools and Technologies
+
+#### GitHub Actions
+GitHub Actions is a built-in CI/CD tool that automates workflows directly from your GitHub repository. It can run tests, build applications, and deploy code automatically whenever changes are pushed. GitHub Actions is ideal for this project because it integrates seamlessly with our repository.
+
+#### Docker
+Docker is a containerization platform that packages the application and its dependencies into containers. This ensures the application runs consistently across different environments (development, testing, production). Docker simplifies deployment and makes the application more scalable and maintainable.
+
+#### Jest
+Jest is a JavaScript testing framework used for unit and integration testing. It helps ensure that individual functions and features work correctly. Running Jest tests in the CI pipeline catches bugs before code is merged.
+
+#### ESLint
+ESLint is a code quality tool that analyzes JavaScript code for potential errors and style issues. Integrating ESLint into the CI pipeline ensures code consistency and prevents common programming mistakes across the team.
+
+#### npm/yarn
+Package managers like npm and yarn manage project dependencies and can run automated build scripts. They are used in the CI pipeline to install dependencies and build the application before testing and deployment.
