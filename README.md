@@ -28,3 +28,51 @@ Tests the application to identify bugs and issues before deployment. Ensures the
 ### Additional Technologies
 - **Git**: Version control system for tracking changes and collaborating on code.
 - **GitHub**: Platform for hosting and managing Git repositories and team collaboration.
+## Database Design
+
+### Key Entities
+
+#### Users
+- **user_id**: Unique identifier for each user
+- **name**: Full name of the user
+- **email**: Email address for login and communication
+- **password**: Encrypted password for authentication
+- **phone**: Contact phone number
+
+#### Properties
+- **property_id**: Unique identifier for each property
+- **owner_id**: Foreign key linking to the user who owns the property
+- **title**: Name/title of the property
+- **description**: Detailed description of the property
+- **location**: Address and coordinates of the property
+- **price_per_night**: Nightly rental rate
+
+#### Bookings
+- **booking_id**: Unique identifier for each booking
+- **user_id**: Foreign key linking to the user making the booking
+- **property_id**: Foreign key linking to the property being booked
+- **check_in_date**: Date when the guest checks in
+- **check_out_date**: Date when the guest checks out
+- **total_price**: Total cost of the booking
+
+#### Reviews
+- **review_id**: Unique identifier for each review
+- **user_id**: Foreign key linking to the user who wrote the review
+- **property_id**: Foreign key linking to the property being reviewed
+- **rating**: Numerical rating (1-5 stars)
+- **comment**: Text feedback from the reviewer
+
+#### Payments
+- **payment_id**: Unique identifier for each payment
+- **booking_id**: Foreign key linking to the booking being paid for
+- **amount**: Payment amount
+- **payment_date**: Date when the payment was made
+- **payment_method**: Method used (credit card, PayPal, etc.)
+
+### Entity Relationships
+- A **User** can own multiple **Properties** (one-to-many relationship)
+- A **User** can make multiple **Bookings** (one-to-many relationship)
+- A **Property** can have multiple **Bookings** (one-to-many relationship)
+- A **Booking** is linked to one **Payment** (one-to-one relationship)
+- A **Property** can have multiple **Reviews** (one-to-many relationship)
+- A **User** can write multiple **Reviews** (one-to-many relationship)
