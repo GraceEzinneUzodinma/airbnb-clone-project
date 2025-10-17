@@ -98,3 +98,28 @@ Allows guests to search for properties based on location, price range, amenities
 
 ### Notifications and Messaging
 Enables communication between guests and hosts through notifications and messaging. This feature allows hosts to respond to inquiries, confirm bookings, and communicate with guests. Clear communication helps prevent misunderstandings and improves overall user satisfaction.
+## API Security
+
+### Authentication
+Authentication verifies that users are who they claim to be by requiring login credentials (username and password). We will implement JWT (JSON Web Tokens) for secure token-based authentication. This is crucial for protecting user accounts and ensuring only authorized users can access their personal data and bookings.
+
+### Authorization
+Authorization determines what authenticated users are allowed to do within the application. We will implement role-based access control (RBAC) to ensure users can only access resources they own or are permitted to access. This prevents unauthorized users from modifying other users' properties, bookings, or payments.
+
+### Data Encryption
+All sensitive data, including passwords and payment information, will be encrypted using industry-standard encryption algorithms. Data will be encrypted both in transit (using HTTPS/SSL) and at rest in the database. This protects user privacy and prevents data breaches from exposing sensitive information.
+
+### Rate Limiting
+Rate limiting restricts the number of API requests a user or IP address can make within a specific time period. This prevents brute-force attacks, DDoS attacks, and protects the server from being overwhelmed. Rate limiting is essential for maintaining API stability and security.
+
+### Input Validation
+All user inputs will be validated on the server side to prevent malicious data from being processed. We will sanitize inputs to prevent SQL injection, cross-site scripting (XSS), and other injection attacks. Proper input validation ensures data integrity and prevents security vulnerabilities.
+
+### Secure Payment Handling
+Payment information will be handled securely using industry-standard payment gateways (e.g., Stripe, PayPal). We will never store full credit card details on our servers and will comply with PCI DSS (Payment Card Industry Data Security Standard). Secure payment handling protects users' financial information and builds trust in the platform.
+
+### CORS (Cross-Origin Resource Sharing)
+CORS policies will be configured to control which external websites can access our API. This prevents unauthorized cross-origin requests and protects against certain types of attacks. Proper CORS configuration ensures the API is only accessed by trusted applications.
+
+### API Logging and Monitoring
+All API requests and responses will be logged and monitored for suspicious activity. We will track authentication attempts, failed requests, and unusual patterns. This helps detect security breaches early and provides an audit trail for compliance and troubleshooting.
